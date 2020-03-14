@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+<title> FastService APP </title>
+<meta charset="utf-8">
+<meta name="author" content="Guilherme Henrique, Hercílio Neto">
+<meta name="description" content="FastService APP, Services APP">
+
+<style>
+
+    body {
+         background-color: gainsboro;
+         }
+    h1 {
+        font-family: Calibri, Arial, sans-serif;
+        font-size: 25;
+        font-style: normal;
+        font-variant: small-caps;
+        color:white;
+        background-color: grey;
+       }
+
+    p {
+        font-family: Calibri, Arial, sans-serif;
+        font-size: 14;
+        font-style:normal;
+        font-variant:normal;
+        text-align: left;
+        text-indent: 10px;        
+      }
+</style></head>
+
+<!-- APARECE NA PÁGINA -->
+
+<h1>&nbsp;&nbsp;FastService App &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    digite seu CEP: <input type="text" ng-model="name"></h1>
+
+<p> <b>Hello World!</b> </p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="appTeste">
+
+<div ng-controller="ctrl1">
+  <p>Login:&nbsp;&nbsp;<input type="text" ng-model="name"></p>
+  <p>Senha: <input type="text" ng-model="idade"></p>
+  <p ng-bind="name"></p>
+  <button ng-click="mostrar()"> OK </button>
+</div>
+
+
+<script>
+    var app1 = angular.module('appTeste',[]);
+        
+    app1.controller('ctrl1',function($scope){
+        $scope.mostrar = function(){
+                $scope.resultado = "Falha ao Conectar ao Banco de Dados.";
+                
+            }
+        }
+
+    );
+
+
+</script>
+
+</body>
+</html>
